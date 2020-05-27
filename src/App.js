@@ -1,4 +1,5 @@
 import React from "react";
+import "./style/tailwind.generated.css";
 
 const App = () => {
   return (

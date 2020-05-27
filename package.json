@@ -3,27 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "autoprefixer": "^9.8.0",
     "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "tailwindcss": "^1.4.6"
   },
   "scripts": {
-    "commit": "git-cz",
-    "build-dictionary": "node_modules/.bin/style-dictionary build --config ./src/components/utils/tokens/config.json",
-    "build-clean": "",
+    "build:tailwind": "postcss src/style/tailwind.css -o src/style/tailwind.generated.css",
+    "dev:tailwind": "postcss -w src/style/tailwind.css -o src/style/tailwind.generated.css",
+    "dev": "npm run dev:tailwind && npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "doc": "jsdoc -c jsdoc.config.json"
+    "doc": "jsdoc -c jsdoc.config.json",
+    "commit": "git-cz"
   },
   "eslintConfig": {
     "extends": "react-app"

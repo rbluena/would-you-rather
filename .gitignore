@@ -22,5 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Ignoring generated tokens
-/src/components/utils/style/
+# Ignoring generated file
+/src/style/tailwind.css
